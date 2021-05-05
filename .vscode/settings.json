@@ -1,0 +1,12 @@
+{
+    "python.linting.pylintEnabled": true,
+    "python.pythonPath": "/home/harlin/.local/share/virtualenvs/levelup-LFRp34-e/bin/python",
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "levelup",
+            "database": "db.sqlite3"
+        }
+    ]
+}

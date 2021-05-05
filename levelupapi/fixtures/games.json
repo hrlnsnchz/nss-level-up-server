@@ -1,0 +1,22 @@
+[
+    {
+        "model": "levelupapi.game",
+        "pk": 1,
+        "fields": {
+            "name": "Monopoly",
+            "game_type": 1,
+            "difficulty": 2,
+            "number_of_players": 10
+        }
+    },
+    {
+        "model": "levelupapi.game",
+        "pk": 2,
+        "fields": {
+            "name": "Uno",
+            "game_type": 1,
+            "difficulty": 1,
+            "number_of_players": 5
+        }
+    }
+]
