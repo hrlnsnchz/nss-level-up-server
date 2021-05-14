@@ -8,3 +8,10 @@ class Event(models.Model):
     date = models.DateField(default="2021-08-14")
     time = models.TimeField(default="12:00")
     attendees = models.ManyToManyField("Gamer", through="EventGamer", related_name="attending")
+    @property
+    def joined(self):
+        return self.__joined
+
+    @joined.setter
+    def joined(self, value):
+        self.__joined = value
