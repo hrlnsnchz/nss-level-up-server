@@ -9,7 +9,7 @@ from levelupapi.models import GameType
 class GameTypes(ViewSet):
     """Level up game types"""
 
-    def retrieve(self, request, pk=None):
+    def retrieve(self, request, pk):
         """Handle GET requests for single game type
 
         Returns:
@@ -28,13 +28,13 @@ class GameTypes(ViewSet):
         Returns:
             Response -- JSON serialized list of game types
         """
-        gametypes = GameType.objects.all()
+        game_types = GameType.objects.all()
 
         # Note the addtional `many=True` argument to the
         # serializer. It's needed when you are serializing
         # a list of objects instead of a single object.
         serializer = GameTypeSerializer(
-            gametypes, many=True, context={'request': request})
+            game_types, many=True, context={'request': request})
         return Response(serializer.data)
 
 class GameTypeSerializer(serializers.ModelSerializer):
